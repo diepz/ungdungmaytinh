@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Demo</title>
+</head>
+<body>
+<form> <!-- biểu mẫu -->
+	<fieldset> <!-- liên kết với legend tạo thành biểu mẫu (form) -->
+		<legend>Form Caculute</legend> <!-- như trên -->
+		<input type="text" name="valone" id="enter_number" value="12">
+		<input type="text" name="vatwo" id="next_number" value="12"><br>
+		<button onclick="Caculute('add')" name="addon" value="addon" id="addon">Addon(+)</button>
+		<button onclick="Caculute('sub')" name="subon" value="subon" id="subon">Subon(-)</button>
+		<button onclick="Caculute('mult')" name="multon" value="multon" id="multon">Multon(*)</button>
+		<button onclick="Caculute('div')" name="divon" value="divon" id="divon">Divon(/)</button>
+		<div id="output"></div>
+	</fieldset>
+</form>
+<script type="text/javascript">
+	function Caculute(type) {
+		console.log();
+var enternumber = Number(document.getElementById('enter_number').value);
+var nextnumber = Number(document.getElementById('next_number').value);
+var total;
+	if (type == "add") {
+		total = enternumber + nextnumber;
+	} else if (type == "sub") {
+		total = enternumber - nextnumber;
+	} else if (type == "mult") {
+		total = enternumber * nextnumber;
+	} else if (type == "div") {
+		total = enternumber / nextnumber;
+	}
+	alert(total);
+						}	
+
+	// switch (type) 
+	// {
+	// 	case 'add':
+	// 	total = enternumber + nextnumber;
+	// 	break;
+	// 	case 'sub':
+	// 	total = enternumber - nextnumber;
+	// 	break;
+	// 	case 'mult':
+	// 	total = enternumber * nextnumber;
+	// 	break;
+	// 	case 'div':
+	// 	total = enternumber / nextnumber;
+	// 	break;
+	// } alert(total);
+
+	
+</script>
+</body>
+</html>
